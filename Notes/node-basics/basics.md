@@ -15,6 +15,16 @@ const dotenv = require("dotenv");
 dotenv.config();
 ```
 
+## Intialized Port
+
+```
+let PORT;
+
+process.env.STATUS === "production"
+  ? (PORT = process.env.PROD_PORT)
+  : (PORT = process.env.DEV_PORT);
+```
+
 ## MongoDB Connection
 
 ```
