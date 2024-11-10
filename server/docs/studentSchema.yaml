@@ -1,0 +1,19 @@
+components:
+  schemas:
+    StudentRequestBody:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+        mobileNumber:
+          type: array
+          items:
+            type: string
+        degree:
+          type: string
+        isActive:
+          type: boolean
