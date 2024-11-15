@@ -4,6 +4,7 @@ const swaggerJsdoc = require("swagger-jsdoc");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
+constant
 
 dotenv.config();
 const app = express();
@@ -32,6 +33,7 @@ const swaggerOptions = {
 
 // Import routes
 const StudentRouter = require("./route/student.route");
+const constant = require("./constants");
 
 // Use routes
 app.use("/api/v1/student", StudentRouter);
