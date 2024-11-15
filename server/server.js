@@ -36,7 +36,7 @@ const StudentRouter = require("./route/student.route");
 const constant = require("./constants");
 
 // Use routes
-app.use("/api/v1/student", StudentRouter);
+app.use(constant.API.PREFIX.concat("/student"), StudentRouter);
 
 mongoose.set("strictQuery", true);
 
