@@ -1,12 +1,17 @@
 const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
+require('express-async-errors');
 const constant = require("./constants");
 const connection = require("./utils/connection");
+const errorHandlerMiddleware = require("./error/error.middleware");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+// import error middleware
+app.use(errorHandlerMiddleware)
 
 // import route files
 const UserRouter = require("./routes/user.route");
